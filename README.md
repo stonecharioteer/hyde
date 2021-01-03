@@ -23,7 +23,7 @@ Hyde uses `toml` files for configuration files. It stores its config
 in `$HOME/.config/hyde/` in Linux and OSX,
 and in the `%APPDIR%` on Windows.
 
-Check out the documentation on [docs.rs/hyde](https://docs.rs/hyde).
+Check out the documentation on [docs.rs/crate/hyde/0.1.0](https://docs.rs/crate/hyde/0.1.0).
 
 ## Usage
 
@@ -37,9 +37,9 @@ Note that hyde uses multiple config files, so a *folder* is required.
 
 `hyde config create` will dump a default configuration file `default.toml` into the config folder. It takes the following optional parameters:
 
-`hyde config create --name blog` will create `blog.toml` in the config folder.
+`hyde --name blog config create` will create `blog.toml` in the config folder.
 
-`hyde config create -n website` will create `website.toml` in the config folder.
+`hyde -n website config create` will create `website.toml` in the config folder.
 
 A config file looks like this:
 
@@ -65,7 +65,7 @@ has_date = false
 folder_name = "pages
 ```
 
-To update a field, use `hyde config -n <name|default> set published.folder_name='something'`
+To update a field, use `hyde config set published.folder_name='something'`
 
 ### `hyde -n blog create 'A New Article on Writing'
 
