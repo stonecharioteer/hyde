@@ -6,7 +6,6 @@ use std::io::Write;
 use std::path::Path;
 use structopt::StructOpt;
 
-
 /// Create and Manage Markdown files and their header content.
 ///
 /// Hyde is a tool that helps you make Jekyll-based Markdown files.
@@ -63,8 +62,6 @@ pub struct HydeCli {
     // path: std::path::PathBuf,
 }
 
-pub HydeCli::from_args;
-
 /// Subcommands for Cli.
 #[allow(dead_code)]
 #[derive(Debug, StructOpt)]
@@ -118,6 +115,8 @@ enum ConfigSubCommands {
         input: String,
     },
     Get {
+        #[structopt(short, long)]
+        all: bool,
         key: String,
     },
     Add {
@@ -153,7 +152,13 @@ pub fn process_cli(args: HydeCli) {
 /// Processes configuration commands.
 fn process_config(cmd: &ConfigSubCommands) {
     match cmd {
-        ConfigSubCommands::Add
+        ConfigSubCommands::Create {} => {
+            // create config file.
+        }
+        ConfigSubCommands::Add { key } => (),
+        ConfigSubCommands::Set { input } => (),
+        ConfigSubCommands::Remove { key } => (),
+        ConfigSubCommands::Get { all, key } => (),
     }
 }
 

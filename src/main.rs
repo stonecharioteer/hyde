@@ -1,4 +1,5 @@
 // Main file
+use structopt::StructOpt;
 mod hyde;
 
 use hyde::{process_cli, HydeCli};
