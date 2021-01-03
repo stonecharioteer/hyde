@@ -3,7 +3,17 @@ name = "hyde"
 version = "0.1.0"
 authors = ["Vinay Keerthi <11478411+stonecharioteer@users.noreply.github.com>"]
 edition = "2018"
+license = "MIT"
+description = "A CLI to help create and manage markdown files used by static site generators like Jekyll"
+repository = "https://github.com/stonecharioteer/hyde"
+readme = "README.md"
+homepage = "https://stonecharioteer.com/hyde.html"
+keywords = ["jekyll", "markdown", "hugo"]
+categories = ["command-line-utilities", "template-engine", "text-processing"]
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+structopt = "0.3.21"
+handlebars = "3.5.2"
